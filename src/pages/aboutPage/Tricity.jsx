@@ -1,4 +1,5 @@
 import React from 'react';
+import aboutImage from '../../assets/about-img.jpg'
 
 const Tricity = () => {
   const timeline = [
@@ -27,7 +28,7 @@ const Tricity = () => {
         <div className="flex-1 w-full">
           <div className="bg-white p-4 shadow-sm border border-zinc-100">
             <img 
-              src="https://images.unsplash.com/photo-1449156001533-cb39c853308c?auto=format&fit=crop&q=80" 
+              src={aboutImage} 
               alt="The Tricity Legacy" 
               className="w-full h-auto grayscale opacity-80"
             />

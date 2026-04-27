@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Stats from './Stats';
 import WhyClearDeal from './WhyClearDeal';
 import FeaturedProjects from './FeaturedProjects';
@@ -20,7 +21,7 @@ const Hero = () => {
       <div className="absolute inset-0 bg-black/40"></div>
 
       {/* Content Container */}
-      <div className="relative z-10 container mx-auto px-6 lg:px-12">
+      <div className="relative z-10 container mx-auto px-6 lg:px-12 py-20">
         <div className="max-w-3xl">
           {/* Badge */}
           <div className="inline-block bg-[#008080] text-white text-[10px] uppercase tracking-widest font-bold px-3 py-1 mb-6">
@@ -39,12 +40,16 @@ const Hero = () => {
 
           {/* Buttons */}
           <div className="flex flex-col sm:flex-row gap-4">
+            <Link to='/projects'>
             <button className="bg-black text-white px-8 py-4 text-xs font-bold uppercase tracking-widest hover:bg-zinc-900 transition-all">
               View Projects
             </button>
-            <button className="border border-white/60 text-white px-8 py-4 text-xs font-bold uppercase tracking-widest hover:bg-white hover:text-black transition-all">
+            </Link>
+           <Link to='/inquiry'>
+           <button className="border border-white/60 text-white px-8 py-4 text-xs font-bold uppercase tracking-widest hover:bg-white hover:text-black transition-all">
               Free Consultation
             </button>
+           </Link>
           </div>
         </div>
       </div>

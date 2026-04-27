@@ -5,17 +5,7 @@ const InquiryPage = () => {
   return (
     <div className="min-h-screen bg-white text-zinc-900 font-sans selection:bg-zinc-200">
       {/* Navigation */}
-      <nav className="flex items-center justify-between px-6 md:px-12 py-6 border-b border-zinc-100 sticky top-0 bg-white/90 backdrop-blur-md z-50">
-        <div className="text-2xl font-bold tracking-tight text-zinc-800">Cleardeal.in</div>
-        <div className="hidden md:flex items-center gap-10 text-sm font-medium text-zinc-500">
-          <a href="#" className="hover:text-black transition-colors">Projects</a>
-          <a href="#" className="hover:text-black transition-colors">About Us</a>
-          <a href="#" className="hover:text-black transition-colors">Contact</a>
-        </div>
-        <button className="bg-[#0f172a] text-white px-6 py-2.5 text-sm font-bold rounded-sm hover:bg-black transition-all">
-          Enquire Now
-        </button>
-      </nav>
+    
 
       <main className="max-w-7xl mx-auto px-6 md:px-12 py-16 md:py-24 animate-in">
         {/* Header Section */}
@@ -145,38 +135,7 @@ const InquiryPage = () => {
         </div>
       </main>
 
-      {/* Footer */}
-      <footer className="bg-zinc-50 border-t border-zinc-200 px-6 md:px-12 py-20 mt-12">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 md:gap-24">
-          <div className="space-y-6">
-            <h3 className="text-xl font-bold">Cleardeal.in</h3>
-            <p className="text-zinc-400 text-xs leading-relaxed max-w-xs">
-              © 2024 Cleardeal.in. Premier Real Estate Brokerage in Chandigarh Tricity.
-            </p>
-          </div>
-          <div className="space-y-6">
-            <h4 className="text-[10px] font-bold uppercase tracking-widest">Quick Links</h4>
-            <div className="flex flex-col gap-4 text-zinc-500 text-sm">
-              <a href="#" className="hover:text-black">Residential Projects</a>
-              <a href="#" className="hover:text-black">Commercial Spaces</a>
-            </div>
-          </div>
-          <div className="space-y-6">
-            <h4 className="text-[10px] font-bold uppercase tracking-widest">Company</h4>
-            <div className="flex flex-col gap-4 text-zinc-500 text-sm">
-              <a href="#" className="hover:text-black">About Our Firm</a>
-              <a href="#" className="hover:text-black">Contact Support</a>
-            </div>
-          </div>
-          <div className="space-y-6">
-            <h4 className="text-[10px] font-bold uppercase tracking-widest">Legal</h4>
-            <div className="flex flex-col gap-4 text-zinc-500 text-sm">
-              <a href="#" className="hover:text-black">Privacy Policy</a>
-            </div>
-          </div>
-        </div>
-      </footer>
-
+   
       <style jsx global>{`
         @keyframes fadeInUp {
           from { opacity: 0; transform: translateY(20px); }

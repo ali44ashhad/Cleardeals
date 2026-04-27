@@ -1,5 +1,5 @@
 import React from 'react';
-import { Globe, Share2, Mail } from 'lucide-react';
+import { FaFacebookF, FaInstagram, FaLinkedinIn, FaTwitter } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
@@ -7,7 +7,7 @@ const Footer = () => {
     <footer className="bg-white py-16 border-t border-zinc-100">
       <div className="container mx-auto px-6 lg:px-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
-          
+
           {/* Brand Info */}
           <div>
             <h3 className="text-xl font-bold text-zinc-900 mb-6">Cleardeal.in</h3>
@@ -15,9 +15,21 @@ const Footer = () => {
               The most trusted real estate consultancy for luxury residential and high-yield commercial properties in the Chandigarh Tricity area.
             </p>
             <div className="flex gap-4 text-zinc-800">
-               <Globe size={18} className="cursor-pointer hover:text-teal-600 transition-colors" />
-               <Share2 size={18} className="cursor-pointer hover:text-teal-600 transition-colors" />
-               <Mail size={18} className="cursor-pointer hover:text-teal-600 transition-colors" />
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+                <FaFacebookF size={18} className="cursor-pointer hover:text-teal-600 transition-colors" />
+              </a>
+
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+                <FaInstagram size={18} className="cursor-pointer hover:text-teal-600 transition-colors" />
+              </a>
+
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                <FaLinkedinIn size={18} className="cursor-pointer hover:text-teal-600 transition-colors" />
+              </a>
+
+              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+                <FaTwitter size={18} className="cursor-pointer hover:text-teal-600 transition-colors" />
+              </a>
             </div>
           </div>
 
@@ -35,7 +47,7 @@ const Footer = () => {
           <div>
             <h4 className="text-[10px] font-bold uppercase tracking-widest text-zinc-900 mb-6">Support</h4>
             <ul className="space-y-4 text-xs text-zinc-500">
-               <Link to='/privacy-policy'>
+              <Link to='/privacy-policy'>
                 <li className="hover:text-zinc-900 cursor-pointer">Privacy Policy</li>
               </Link>
               <Link to='/term-condition'>
@@ -57,12 +69,12 @@ const Footer = () => {
 
         </div>
       </div>
-      <div className="text-gray-500 mt-20 pt-8 border-t border-zinc-800 flex flex-col md:flex-row justify-center items-center gap-4 text-xs tracking-wider ">
-  <p className='text-center'>
-    © {new Date().getFullYear()} Cleardeal.in. Premier Real Estate Brokerage in Chandigarh Tricity.
-  </p>
- 
-</div>
+      <div className="text-gray-500 pt-8 border-t border-zinc-300 flex flex-col md:flex-row justify-center items-center gap-4 text-xs tracking-wider ">
+        <p className='text-center'>
+          © {new Date().getFullYear()} Cleardeal.in. Premier Real Estate Brokerage in Chandigarh Tricity.
+        </p>
+
+      </div>
     </footer>
   );
 };

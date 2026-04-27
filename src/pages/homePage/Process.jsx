@@ -10,11 +10,17 @@ const Process = () => {
   ];
 
   return (
-    <section className="bg-[#0a1120] py-16 text-white overflow-hidden">
-      <div className="container mx-auto px-6 lg:px-20 flex flex-col lg:flex-row gap-10 items-center">
+    // Added flex and items-center to the section to ensure vertical alignment if needed
+    <section className="bg-[#0a1120] py-20 text-white overflow-hidden min-h-screen flex items-center justify-center">
+      
+      {/* 1. Reduced gap to 4 for closer blocks
+        2. mx-auto ensures horizontal centering
+        3. Changed items-center to items-stretch or items-center based on preference
+      */}
+      <div className="container mx-auto px-6 lg:px-20 flex flex-col lg:flex-row gap-4 items-center justify-center">
         
         {/* Left Side: Process Steps */}
-        <div className="flex-1 py-4">
+        <div className="flex-1 py-4 w-full">
           <h2 className="text-3xl font-bold mb-4">The Clear Deal Process</h2>
           <p className="text-gray-400 mb-8 max-w-lg text-sm leading-relaxed">
             We've eliminated the stress of property buying by creating a standardized, four-step transparency framework.
@@ -35,20 +41,18 @@ const Process = () => {
           </div>
         </div>
 
-        {/* Right Side: Block inside a Block (Testimonial) */}
-        <div className="flex-1 w-full flex justify-center lg:justify-end">
-          {/* Outer Block */}
-          <div className="bg-[#151d2e]/50 p-8 md:p-12 w-full max-w-md h-full flex items-center justify-center">
-            {/* Inner Block */}
-            <div className="bg-[#151d2e] p-8 relative shadow-2xl border border-white/5">
+        {/* Right Side: Centered Testimonial Block */}
+        <div className="flex-1 w-full flex justify-center lg:justify-center">
+          <div className="bg-[#151d2e]/50 p-6 md:p-10 w-full max-w-xl flex items-center justify-center">
+            <div className="bg-[#151d2e] p-10 relative shadow-2xl border border-white/5 w-full">
                <div className="mb-6 text-teal-500 flex justify-center">
-                  <Quote size={32} fill="currentColor" className="opacity-20" />
+                  <Quote size={40} fill="currentColor" className="opacity-20" />
                </div>
-               <div className="border-l-2 border-teal-500 pl-5">
-                  <p className="text-md italic text-gray-300 leading-relaxed mb-4">
+               <div className="border-l-2 border-teal-500 pl-6">
+                  <p className="text-lg italic text-gray-300 leading-relaxed mb-6">
                     "The team at Cleardeal saved us months of searching. Their report on the property's legal history was eye-opening and eventually saved us from a bad investment."
                   </p>
-                  <p className="text-teal-500 text-xs font-semibold tracking-wider">— Vikramjit Singh, Mohali</p>
+                  <p className="text-teal-500 text-sm font-semibold tracking-wider">— Vikramjit Singh, Mohali</p>
                </div>
             </div>
           </div>

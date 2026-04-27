@@ -15,9 +15,11 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 w-full bg-white border-b border-gray-100 px-6 py-4 flex items-center justify-between z-50">
       {/* Logo */}
-      <div className="text-2xl font-bold text-slate-800">
+     <Link to='/'> 
+     <div className="text-2xl font-bold text-slate-800">
         Cleardeal.in
       </div>
+     </Link>
 
       {/* Desktop Navigation (Hidden below 992px) */}
       <div className="hidden lg:flex items-center gap-8">
@@ -38,11 +40,13 @@ const Navbar = () => {
       </div>
 
       {/* Action Button (Desktop) */}
+      <Link to='/inquiry'>
       <div className="hidden lg:block">
         <button className="bg-black text-white px-6 py-2.5 text-sm font-semibold tracking-wider hover:bg-zinc-800 transition-all uppercase">
           Enquire Now
         </button>
       </div>
+      </Link>
 
       {/* Hamburger Icon (Visible below 992px) */}
       <button 

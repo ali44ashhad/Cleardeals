@@ -138,7 +138,7 @@ const ProjectDetail = () => {
                 </div>
             </main>
             <section className="">
-                <section className="grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-4 h-[90vh] md:h-[110vh] mb-24">
+                <section className="px-10 grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-4 h-[90vh] md:h-[110vh] mb-24">
                     {gridImages.map((img, index) => (
                         <div
                             key={img.id ?? index}
@@ -151,7 +151,7 @@ const ProjectDetail = () => {
             </section>
 
             {/* Neighborhood Mapping Section */}
-            <section className="mb-16">
+            <section className="px-10 mb-16">
                 <h2 className="text-3xl font-bold mb-8">The Neighborhood</h2>
                 <div className="relative mb-12 border border-zinc-100 p-2 rounded-sm overflow-hidden shadow-sm">
                     <img src={project.neighborhood?.mapImage} alt="Map" className="w-full h-[400px] object-cover grayscale" />
