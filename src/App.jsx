@@ -10,6 +10,7 @@ import PrivacyPolicy from './pages/privacyPolicy/PrivacyPolicy';
 import TermsAndConditions from './pages/privacyPolicy/TermsAndConditions';
 import InquiryPage from './pages/contactPages/InquiryPage';
 import ProjectDetail from './pages/projectsPages/ProjectDetail';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   const [loading, setLoading] = useState(false);
@@ -23,13 +24,15 @@ function App() {
     // Set a timeout to remove the loading screen
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 400); 
+    }, 500); 
 
     return () => clearTimeout(timer);
   }, [location.pathname]);
 
   return (
     <>
+          <ScrollToTop />
+
       {/* Inline Loading Component */}
       {loading && (
         <div className="fixed inset-0 z-[999] flex items-center justify-center bg-white">
@@ -50,7 +53,7 @@ function App() {
         <Route path='/inquiry' element={<InquiryPage />}/>
 
         <Route path='/privacy-policy' element={<PrivacyPolicy />}/>
-        <Route path='/term&condition' element={<TermsAndConditions />}/>
+        <Route path='/term-condition' element={<TermsAndConditions />}/>
 
 
         <Route path="/projects/:id" element={<ProjectDetail />} />

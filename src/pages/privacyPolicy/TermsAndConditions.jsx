@@ -136,19 +136,7 @@ const TermsAndConditions = () => {
       </main>
 
       {/* Footer */}
-      <footer className="bg-zinc-50 border-t border-zinc-200 px-6 py-12">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
-          <div className="text-lg font-bold tracking-tighter uppercase">EstateElite</div>
-          <div className="flex flex-wrap justify-center gap-6 text-[10px] font-bold uppercase tracking-widest text-zinc-400">
-            {['Privacy Policy', 'Terms & Conditions', 'Sitemap', 'Office Locations'].map(link => (
-              <a key={link} href="#" className="hover:text-black">{link}</a>
-            ))}
-          </div>
-          <div className="text-[10px] font-bold uppercase tracking-widest text-zinc-400">
-            © 2024 ESTATEELITE LUXURY BROKERAGE. ALL RIGHTS RESERVED.
-          </div>
-        </div>
-      </footer>
+      
     </div>
   );
 };

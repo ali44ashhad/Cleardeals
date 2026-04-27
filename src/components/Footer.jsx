@@ -24,10 +24,10 @@ const Footer = () => {
           {/* Quick Links */}
           <div>
             <h4 className="text-[10px] font-bold uppercase tracking-widest text-zinc-900 mb-6">Quick Links</h4>
-            <ul className="space-y-4 text-xs text-zinc-500">
-              <li className="hover:text-zinc-900 cursor-pointer">Residential Projects</li>
-              <li className="hover:text-zinc-900 cursor-pointer">Commercial Spaces</li>
-              <li className="hover:text-zinc-900 cursor-pointer">About Us</li>
+            <ul className=" text-xs text-zinc-500">
+              <Link to='/projects'><li className="hover:text-zinc-900 cursor-pointer ">Residential Projects</li></Link>
+              <Link to='/about'><li className="hover:text-zinc-900 cursor-pointer pt-3">About Us</li></Link>
+              <Link to='/contact'><li className="hover:text-zinc-900 cursor-pointer pt-3">contact Us</li></Link>
             </ul>
           </div>
 
@@ -35,12 +35,11 @@ const Footer = () => {
           <div>
             <h4 className="text-[10px] font-bold uppercase tracking-widest text-zinc-900 mb-6">Support</h4>
             <ul className="space-y-4 text-xs text-zinc-500">
-              <li className="hover:text-zinc-900 cursor-pointer">Contact Us</li>
-              <Link to='/privacy-policy'>
+               <Link to='/privacy-policy'>
                 <li className="hover:text-zinc-900 cursor-pointer">Privacy Policy</li>
               </Link>
-              <Link to='/term&condition'>
-                <li className="hover:text-zinc-900 cursor-pointer">Terms & Conditions</li>
+              <Link to='/term-condition'>
+                <li className="hover:text-zinc-900 cursor-pointer pt-3">Terms & Conditions</li>
               </Link>
             </ul>
           </div>
