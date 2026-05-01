@@ -6,9 +6,9 @@ import OurExperts from './OurExperts';
 const AboutHero = () => {
   return (
    <>
-    <section className="relative w-full py-20 lg:py-32 overflow-hidden bg-white">
+    <section className="relative w-full h-[98vh] py-20 lg:py-32 overflow-hidden bg-black">
       {/* Background Image with Opacity Mask */}
-      <div className="absolute top-0 right-0 w-full h-full opacity-10 pointer-events-none">
+      <div className="absolute top-0 right-0 w-full h-[98vh] opacity-60 pointer-events-none">
         <img 
           src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80" 
           alt="Background Architecture" 
@@ -17,14 +17,14 @@ const AboutHero = () => {
       </div>
 
       <div className="container mx-auto px-6 lg:px-12 relative z-10">
-        <div className="max-w-3xl">
-          <h4 className="text-[10px] font-bold uppercase tracking-[0.4em] text-[#008080] mb-6">
+        <div className="max-w-3xl z-10 lg:pt-35 sm:pt-30">
+          <h4 className="text-[10px] font-bold uppercase tracking-[0.4em] text-[#3AF2CF]">
             Established in Chandigarh
-          </h4>
-          <h1 className="text-3xl md:text-5xl font-bold text-zinc-900 leading-tight mb-8">
+          </h4> 
+          <h1 className="text-3xl md:text-5xl font-bold text-white leading-tight mb-8">
             Pioneering Clarity in Chandigarh's Real Estate.
           </h1>
-          <div className="space-y-6 text-zinc-500 text-sm md:text-base leading-relaxed max-w-2xl">
+          <div className="space-y-6 text-white text-sm md:text-base leading-relaxed max-w-2xl">
             <p>
               At Cleardeal.in, we transform complex property transactions into seamless experiences through unwavering transparency and market-leading expertise.
             </p>
