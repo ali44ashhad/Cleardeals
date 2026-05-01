@@ -1,65 +1,107 @@
 import React from 'react';
+import { motion } from "framer-motion";
 
 const OurExperts = () => {
+
   const experts = [
     {
       name: 'Neeraj Bansal',
-      role: 'FOUNDER & MANAGING DIRECTOR',
-      desc: '20+ years of strategic real estate advisory in Northern India.',
+      role: 'Founder & Managing Director',
+      desc: 'With over two decades of experience in real estate advisory, he brings deep market insights and strategic leadership, guiding clients towards high-value investments across Northern India.',
       image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=800'
     },
     {
       name: 'Jatin Jain',
-      role: 'HEAD OF LUXURY ASSETS',
-      desc: 'Specializes in ultra-HNW property acquisitions in Chandigarh Parkview.',
+      role: 'Head of Luxury Assets',
+      desc: 'Specializing in ultra high-net-worth property acquisitions, he curates exclusive luxury residences and ensures clients receive unmatched value, privacy, and sophistication.',
       image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=800'
     },
     {
       name: 'Madhav Bansal',
-      role: 'COMMERCIAL STRATEGY',
-      desc: 'Expert in Mohali IT-Park commercial leasing and institutional sales.',
+      role: 'Commercial Strategy',
+      desc: 'An expert in commercial real estate, he focuses on IT park leasing and institutional sales, delivering strategic solutions that maximize long-term business growth.',
       image: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=800'
     }
   ];
 
+  // 🔥 Animation variants
+  const containerVariants = {
+    hidden: {},
+    visible: {
+      transition: {
+        staggerChildren: 0.2
+      }
+    }
+  };
+
+  const cardVariants = {
+    hidden: { opacity: 0, x: -80 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: { duration: 0.6, ease: "easeOut" }
+    }
+  };
+
   return (
     <section className="py-24 bg-white">
       <div className="container mx-auto px-6 lg:px-12">
-        {/* Section Header */}
+
+        {/* Header */}
         <div className="text-center mb-20">
-          <h2 className="text-sm font-bold tracking-[0.3em] uppercase text-zinc-900 mb-4">Our Experts</h2>
-          <p className="text-zinc-500 text-xs md:text-sm max-w-xl mx-auto leading-relaxed">
-            Guided by industry veterans with deep roots in the local market and global standards of service.
+          <h2 className="text-2xl md:text-3xl font-bold tracking-[0.25em] uppercase text-[#008080] mb-4">
+            Our Experts
+          </h2>
+          <p className="text-zinc-500 text-sm md:text-base max-w-2xl mx-auto leading-relaxed">
+            Our team of seasoned professionals brings unmatched expertise, industry knowledge, 
+            and a client-first approach to deliver exceptional real estate experiences with 
+            precision, trust, and long-term value.
           </p>
         </div>
 
-        {/* Experts Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {/* Grid */}
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
+        >
           {experts.map((expert, index) => (
-            <div key={index} className="group flex flex-col border border-zinc-100 p-4 bg-white hover:shadow-xl transition-all duration-300">
-              
-              {/* Image Container */}
-              <div className="aspect-[4/5] overflow-hidden mb-6">
-                <img 
-                  src={expert.image} 
-                  alt={expert.name} 
-                  className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
+            <motion.div
+              key={index}
+              variants={cardVariants}
+              className="group flex flex-col bg-white border border-zinc-200 rounded-xl overflow-hidden hover:shadow-xl transition-all duration-500"
+            >
+
+              {/* Image */}
+              <div className="aspect-[4/5] overflow-hidden">
+                <img
+                  src={expert.image}
+                  alt={expert.name}
+                  className="w-full h-full object-cover group-hover:scale-105 transition duration-700"
                 />
               </div>
 
-              {/* Text Content */}
-              <div className="px-2 pb-4">
-                <h3 className="text-lg font-bold text-zinc-900 mb-1">{expert.name}</h3>
-                <h4 className="text-[10px] font-bold tracking-widest text-[#008080] uppercase mb-4">
+              {/* Content */}
+              <div className="p-6">
+                <h3 className="text-xl font-semibold text-zinc-900 mb-1">
+                  {expert.name}
+                </h3>
+
+                <h4 className="text-xs font-bold tracking-widest text-[#008080] uppercase mb-3">
                   {expert.role}
                 </h4>
-                <p className="text-xs text-zinc-500 leading-relaxed">
+
+                <p className="text-sm text-zinc-600 leading-relaxed">
                   {expert.desc}
                 </p>
               </div>
-            </div>
+
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
+
       </div>
     </section>
   );
